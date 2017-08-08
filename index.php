@@ -1,16 +1,13 @@
 <?php
 
 require 'functions.php';
-require 'database/Connection.php';
-require 'database/QueryBuilder.php';
+
 require 'Task.php';
 
 
 
-$pdo = Connection::make();
+$query = require 'bootstrap.php';
 
-$query = new QueryBuilder($pdo);
-
-$tasks = $query->selectAll('todos');
+$tasks = $query->selectAll('todos', 'task');
 
 require 'index.view.php';
