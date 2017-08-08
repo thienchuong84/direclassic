@@ -1,24 +1,16 @@
 <?php
 
 require 'functions.php';
+require 'database/Connection.php';
+require 'database/QueryBuilder.php';
 require 'Task.php';
 
 
 
-$pdo = connectToDb();
+$pdo = Connection::make();
 
-// $statement = $pdo->prepare('SELECT * FROM todos');
+$query = new QueryBuilder($pdo);
 
-// $statement->execute();
-
-// var_dump($statement->fetchAll());
-// var_dump($statement->fetchAll(PDO::FETCH_OBJ));
-
-// $tasks = $statement->fetchAll(PDO::FETCH_OBJ);
-
-// $tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
-
-
-$tasks = fetchAllTasks($pdo);
+$tasks = $query->selectAll('todos');
 
 require 'index.view.php';
