@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Dire Classic</title>
-</head>
-<body>
+<?php require 'partials/head.php'; ?>
+
+<?php require('partials/nav.php'); ?>
+
 	direclassic.com
-	<ul>
-		<li><a href="/about">About Us</a></li>
-		<li><a href="/contact">Contact Us</a></li>
-	</ul>
+
 
 	<ul>
 		<?php foreach($tasks as $task): ?>
@@ -22,5 +16,5 @@
 			</li>
 		<?php endforeach; ?>
 	</ul>
-</body>
-</html>
+
+<?php require 'partials/footer.php'; ?>
