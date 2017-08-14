@@ -8,7 +8,8 @@ App::bind('config', require 'config.php');
 
 
 
-require 'functions.php';
+// require 'functions.php';
+require 'core/functions.php';	// vì nó đọc từ file index.php nên ta phải require từ core
 
 // require 'Task.php';
 

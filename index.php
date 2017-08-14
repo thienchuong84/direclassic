@@ -17,6 +17,6 @@ $router = new Router;
 
 // ->direct(REQUEST::uri()); ở trên ko phân biệt GET hay POST vì thế edit lại như dưới
 // tất nhiên phải vào class Request thêm method method() vào
-require Router::load('routes.php')->direct(Request::uri(), Request::method());
+Router::load('routes.php')->direct(Request::uri(), Request::method());
 
 
