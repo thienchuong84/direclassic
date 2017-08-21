@@ -17,7 +17,8 @@
 // ])
 
 // $router->get('', 'controllers/index.php');
-$router->get('', 'PagesController@home');
+$router->get('', 'HomesController@index');
+$router->get('home2', 'HomesController@home2');
 
 // $router->get('about', 'controllers/about.php');
 $router->get('about', 'PagesController@about');
